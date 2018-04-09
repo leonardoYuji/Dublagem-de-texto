@@ -1,6 +1,6 @@
 import cv2
 
-imagem = cv2.imread('gintoki.png')
+imagem = cv2.imread('lena.png')
 
 k = imagem.shape[0]
 kk = k / 2 - 0
