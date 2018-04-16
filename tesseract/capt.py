@@ -1,10 +1,13 @@
+# -*- coding: utf-8 -*-
+
+
 import pytesseract as ocr
 import numpy as np
 import cv2
 from PIL import Image
+import os
 
-
-imagem = Image.open('print.png').convert('RGB')
+imagem = Image.open('texto.jpg').convert('RGB')
 
 
 npimagem = np.asarray(imagem).astype(np.uint8)  
@@ -20,8 +23,10 @@ ret, thresh = cv2.threshold(im, 127, 255, cv2.THRESH_BINARY | cv2.THRESH_OTSU)
 binimagem = Image.fromarray(thresh) 
 
 
-phrase = ocr.image_to_string(binimagem, lang='eng')
+phrase = ocr.image_to_string(imagem, lang='por')
 
-print(phrase) 
-cv2.imshow('img',thresh)
-cv2.waitKey(0)
+stri = 'max'
+
+a = 'espeak -vpt ""'.format(phrase) 
+os.system(a)
+
