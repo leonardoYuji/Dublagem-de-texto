@@ -25,8 +25,6 @@ binimagem = Image.fromarray(thresh)
 
 phrase = ocr.image_to_string(imagem, lang='por')
 
-stri = 'max'
-
-a = 'espeak -vpt ""'.format(phrase) 
+a = 'espeak -vpt "{0}"'.format(phrase) 
 os.system(a)
 
