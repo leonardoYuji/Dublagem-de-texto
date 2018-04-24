@@ -7,7 +7,7 @@ import cv2
 from PIL import Image
 import os
 
-imagem = Image.open('out.jpg').convert('RGB')
+imagem = Image.open('texto.jpg').convert('RGB')
 
 
 npimagem = np.asarray(imagem).astype(np.uint8)  
@@ -26,5 +26,6 @@ binimagem = Image.fromarray(thresh)
 phrase = ocr.image_to_string(imagem, lang='por')
 
 a = 'espeak -vpt "{0}"'.format(phrase) 
+print a
 os.system(a)
 
