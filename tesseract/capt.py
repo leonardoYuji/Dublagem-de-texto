@@ -7,7 +7,7 @@ import cv2
 from PIL import Image
 import os
 
-imagem = Image.open('texto.jpg').convert('RGB')
+imagem = Image.open('t.jpg').convert('RGB')
 
 
 npimagem = np.asarray(imagem).astype(np.uint8)  

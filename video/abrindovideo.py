@@ -58,7 +58,7 @@ while(True):
 		    arc_len = cv2.arcLength( cont, True )
 		    approx = cv2.approxPolyDP(cont,0.01*cv2.arcLength(cont,True),True)
 		    if len(approx) == 4:
-			print "oi"
+			IS_FOUND = 1
 
 cap.release()
 cv2.destroyAllWindows()
