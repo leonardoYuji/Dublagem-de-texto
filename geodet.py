@@ -21,12 +21,16 @@ MORPH = 7
 CANNY = 250 
 ################## 
 # 420x600 oranı 105mmx150mm gerçek boyuttaki kağıt için 
-_width  = 600.0 
-_height = 420.0 
+#_width  = 600.0 
+#_height = 420.0
+
+#para a camera HD, a resolução de 600x400 está dando problema de alimentação. 
+_width  = 1280.0 
+_height = 720.0 
 _margin = 0.0 
 ################## 
  
-if USE_CAM: video_capture = cv2.VideoCapture(0) 
+if USE_CAM: video_capture = cv2.VideoCapture(1) 
  
 corners = np.array( 
   [ 
