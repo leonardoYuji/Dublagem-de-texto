@@ -25,8 +25,8 @@ CANNY = 250
 #_height = 420.0
 
 #para a camera HD, a resolução de 600x400 está dando problema de alimentação. 
-_width  = 1280.0 
-_height = 720.0 
+_width  = 600.0 
+_height = 400.0 
 _margin = 0.0 
 ################## 
  
@@ -87,7 +87,7 @@ while True :
           phrase = ocr.image_to_string(Image.open('out.jpg'), lang='por') 
           print phrase 
           print "Pictures saved" 
-          a = 'espeak -vpt "{0}"'.format(phrase)  
+          a = 'espeak -vpt-br+f5 "{0}"'.format(phrase)  
           time.sleep(0.2)
           os.system(a) 
  
