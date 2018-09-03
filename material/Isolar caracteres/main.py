@@ -24,11 +24,19 @@ def findFeaturesVector(img):
 rois  = []
 
 orig = cv2.imread('out.jpg')
+
+
+orig = imutils.rotate_bound(orig, 90)
+cv2.imwrite('rotated.png',orig)
+
+
+height, width, channels = orig.shape
+
+
 copy = orig.copy()
 
 img = cv2.cvtColor(orig, cv2.COLOR_BGR2GRAY)
 
-height, width, channels = orig.shape
 
 print height, width, channels
 
