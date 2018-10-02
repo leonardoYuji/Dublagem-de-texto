@@ -48,10 +48,10 @@ while True :
   if USE_CAM : 
     ret, rgb = video_capture.read() 
   else : 
-    ret = 1
+    ret = 1 
     rgb = cv2.imread( "opencv.jpg", 0 ) 
  
-  if ret: 
+  if  ret: 
  
     gray = cv2.cvtColor( rgb, cv2.COLOR_BGR2GRAY ) 
  
