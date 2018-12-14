@@ -1,0 +1,54 @@
+body{
+	background:rgb(248,248,248);
+}
+.register-t{
+	width:40%;
+	background:rgb(0,162,232);
+	border:0;
+	border-radius:6px 6px 0 0;
+	padding:10px;
+	margin-top:60px;
+	position:relative;
+	font-size: 40px;
+	color:white;
+}
+.register-c{
+	display:flex;
+	justify-content: flex-start;
+	flex-direction: column;
+	flex-wrap: wrap;
+	width:40%;
+	background: rgb(220,220,220);
+	color:rgb(100,100,100);
+	font-size:18px;
+	border:0;
+	padding:20px;
+}
+.register-c input{
+	width:90%;
+	border:0;
+	border-radius: 4px;
+	font-size:22px;
+	margin-bottom:10px;
+}
+.register-e{
+	width:40%;
+	background: rgb(248,248,248);
+	border:0;
+	padding:20px;
+	display:flex;
+	justify-content:space-around;
+}
+
+.register-e .botton{
+position:relative;
+}
+.register-e .button a{
+text-decoration:none;
+background:green;
+color:white;
+border-radius:5px;
+padding:10px 20px;
+font-family:arial;
+font-size:25px;
+}

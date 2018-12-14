@@ -14,7 +14,7 @@ sudo apt-get install python-matplotlib
  
 ################## 
 DELAY = 0.02 
-USE_CAM = 1 
+USE_CAM = 1
 IS_FOUND = 0 
  
 MORPH = 7 

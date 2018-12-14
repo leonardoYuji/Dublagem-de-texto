@@ -7,6 +7,7 @@
 # WARNING! All changes made in this file will be lost!
 
 from PyQt4 import QtCore, QtGui
+import subprocess
 
 try:
     _fromUtf8 = QtCore.QString.fromUtf8
@@ -37,18 +38,17 @@ class Ui_MainWindow(object):
         self.iniciar.setStyleSheet(_fromUtf8("background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(223, 81, 34, 255));\n"
 "border:none ;\n"
 "color:white;"))
+	self.iniciar.clicked.connect(self.executar)
         self.iniciar.setObjectName(_fromUtf8("iniciar"))
         self.label = QtGui.QLabel(self.widget)
         self.label.setGeometry(QtCore.QRect(40, 280, 831, 101))
         self.label.setStyleSheet(_fromUtf8("font: 75 italic 18pt \"Roboto\";"))
         self.label.setObjectName(_fromUtf8("label"))
         self.label_3 = QtGui.QLabel(self.widget)
-        self.label_3.setGeometry(QtCore.QRect(100, -50, 721, 291))
+        self.label_3.setGeometry(QtCore.QRect(100, 30, 721, 291))
+        self.label_3.setText(_fromUtf8(""))
+        self.label_3.setPixmap(QtGui.QPixmap(_fromUtf8("img1.png")))
         self.label_3.setObjectName(_fromUtf8("label_3"))
-        self.label.raise_()
-        self.iniciar.raise_()
-        self.label.raise_()
-        self.label_3.raise_()
         self.label_2 = QtGui.QLabel(self.centralwidget)
         self.label_2.setGeometry(QtCore.QRect(30, 560, 291, 31))
         self.label_2.setStyleSheet(_fromUtf8("color: tomato;"))
@@ -57,15 +57,16 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
+    def executar(self):
+	subprocess.call(["python", "geodet.py"])
+
 
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow", None))
         self.iniciar.setText(_translate("MainWindow", "Iniciar", None))
-        self.label.setText(_translate("MainWindow", "Reconhecimento e sintetização de textos digitais em linguagem natural humana", None))
-        self.label_3.setText(_translate("MainWindow", "<html><head/><body><p><img src=\":/newPrefix/Captura de tela de 2018-11-20 17-03-23.png\"/></p></body></html>", None))
+        self.label.setText(_translate("MainWindow", "Reconhecimento de textos e sua sintetização em linguagem natural humana", None))
         self.label_2.setText(_translate("MainWindow", "* Pressione (Q) para encerrar a aplicação", None))
 
-import logo_rc
 
 if __name__ == "__main__":
     import sys

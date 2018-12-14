@@ -64,19 +64,18 @@ color:white;</string>
      <property name="geometry">
       <rect>
        <x>100</x>
-       <y>-50</y>
+       <y>30</y>
        <width>721</width>
        <height>291</height>
       </rect>
      </property>
      <property name="text">
-      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/newPrefix/Captura de tela de 2018-11-20 17-03-23.png&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap>img1.png</pixmap>
      </property>
     </widget>
-    <zorder>label</zorder>
-    <zorder>iniciar</zorder>
-    <zorder>label</zorder>
-    <zorder>label_3</zorder>
    </widget>
    <widget class="QLabel" name="label_2">
     <property name="geometry">

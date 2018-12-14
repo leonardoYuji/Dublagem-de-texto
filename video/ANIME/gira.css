@@ -1,0 +1,11 @@
+.gira{
+	width:100px;
+	height:100px;
+}
+.gira:hover{
+	animation:girar 4s linear;
+}
+@keyframes girar{
+	to{transform:rotate(0deg);}
+	from{transform:rotate(360deg);}
+}

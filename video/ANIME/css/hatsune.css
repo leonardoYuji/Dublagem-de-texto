@@ -1,0 +1,72 @@
+*{
+	margin:0;
+	padding:0;
+}
+.fist-box{
+background:url(img/legal.png);
+background-size:120%;
+width:100%;
+height:800px;
+padding:20px 0px 0px 70px;
+}
+@font-face{
+	font-family:AR DECODE;
+	src:url('ARDECODE.ttf');
+}
+.fist-box p{
+	
+	color:rgb(4,109,129);
+	font-family:AR DECODE;
+	font-size: 150px;
+	font-weight: bold;
+	width:50%;
+}
+.fist-box .text-menor{
+	color:rgb(50,50,50);
+	font-family:AR DECODE;
+	font-size:80px;
+	width:700px;
+}
+
+.pesquisa{
+	border:2px solid ahgx;
+	background:rgba(200,200,200,0.5);
+	margin-right:0;
+	width:620px;
+	border-radius: 7px 0 0 7px;
+	height:80px;
+	font-size:38px;
+	font-family:cubic;
+	transition:all 0.5s;
+}
+.pesquisa:focus{
+	background:rgba(220,220,220,1);
+	border-color:rgb(50,50,50);
+}
+.ok{
+	text-align: center;
+	border:0;
+	background:rgb(61,148,188);
+	font-size:32px;
+	margin-left:-6px;
+	width:80px;
+	height:80px;
+	border-radius:0px 7px 7px 0px;
+	transition:all 0.2s;
+	color:white;
+}
+.pesquisa:hover{
+	border:2px solid rgb(61,148,188);
+}
+.ok:hover{
+	background:rgb(52,124,158);
+	box-shadow:4px 4px 10px rgb(0,0,0);
+}
+.fist-box .chibi{
+	font-size:40px;
+	font-family:ar decode;
+	color:rgb(255,79,136);
+	font-weight: bold;
+
+}
+

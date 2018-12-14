@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Spinner</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/gira.css">
+	<link rel="stylesheet" type="text/css" href="css/drop-menu.css">
+	<link rel="stylesheet" type="text/css" href="css/modal.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+	#inteiro{
+display:block;
+width:100%;
+height:100%;
+left:0;
+top:0;
+z-index:5;
+position:relative;
+background-color:rgba(0,0,0,0);
+}
+
+</style>
+
+
+</head>
+<body bgcolor="white">
+<div id="bar"><p>qwdwqh sxqwuxyg qwsqwuhxs qxhqwuxhqusiuxqn></p> <button id="close">X</button></div>
+	<div id="menu">
+		<ul>
+			<li><a href="#" id="butbar"><i class="fa fa-bars" style="font-size:24px"  id="butbar"></i>oi</a></li>
+			<li><a href="home.php">HOME</a></li>
+			<li><a href="#">Animes</a></li>
+			<li><a href="#" onmouseover="onove(this)" onmouseout="onout(this)" id="dop">alguma</a>
+				<ul>
+					<li><a href="#" onmouseover="ove(this)" onmouseout="out(this)">algo</a></li>
+					<li><a href="#" onmouseover="ove(this)" onmouseout="out(this)">algo</a></li>
+					<li><a href="#" onmouseover="ove(this)" onmouseout="out(this)">Outros</a></li>
+				</ul>
+
+			</li>
+			<li><a href="#" id="butmodal">Login</a></li>
+		</ul>
+	</div>
+	<img class="gira" src="css/gira/sp1.png">
+	<img class="gira" src="css/gira/sp3.png">
+	<img class="gira" src="css/gira/sp1.png">
+	<img class="gira" src="css/gira/sp3.png">
+	<img class="gira" src="css/gira/sp1.png">
+	<img class="gira" src="css/gira/sp3.png">
+	<img class="gira" src="css/gira/sp1.png">
+	<img class="gira" src="css/gira/sp3.png">
+	<img class="gira" src="css/gira/sp1.png">
+	<img class="gira" src="css/gira/sp3.png">
+	<img class="gira" src="css/gira/sp1.png">
+	<img class="gira" src="css/gira/sp3.png">
+	<img class="gira" src="css/gira/sp1.png">
+	<img class="gira" src="css/gira/sp3.png">
+	
+	<!-- modal box-->
+
+
+<div class="telacheia">
+		<div id="modal-box">
+			<form>
+				<p class="login">Login</p>
+				<input type="text" name="login" class="inputs" required placeholder="Digite seu login">
+				<p class="login">Senha</p>
+				<input type="password" name="senha" class="inputs" required placeholder="Digite sua senha"><br>
+				<a href="cadastro.php">Cadastrar-se</a><br><br>
+				<input type="submit" name="enviar" class="enviar" value="enviar">
+			</form>
+		</div>
+	</div>
+<!-- end modal box-->
+	<script>
+// menu dropdown
+var a = document.getElementById('dop'); 
+function ove(obj){
+	a.style.color = "rgb(61,148,188)";
+	a.style.background = "rgb(20,20,20)";
+}
+function out(obj){
+	a.style.color = "rgb(230,230,230)";
+	a.style.background = "rgb(26,26,26)";
+}
+function onove(obj){
+	a.style.color = "rgb(61,148,188)";
+}
+function onout(obj){
+	a.style.color = "rgb(230,230,230)";
+	a.style.margin = "0";
+}
+// fim menu dropdown
+
+//menu bar
+
+var menu = document.getElementById('bar');
+var butbar = document.getElementById('butbar');
+var close = document.getElementById('close');
+
+butbar.onclick = function(){
+	menu.style.visibility = "visible";
+	menu.style.left = "0";
+	menu.style.opacity = "1";
+	int.style.position = "fixed";
+	int.style.display = "block";
+}
+close.onclick = function(){
+		menu.style.visibility = "hidden";
+		menu.style.left = "-200px";
+		menu.style.opacity = "0";
+		int.style.position = "relative";
+		int.style.display = "none";	
+}
+
+//fim menu bar
+
+//modal box
+
+var modal = document.getElementsByClassName('telacheia')[0];
+		var butmodal = document.getElementById('butmodal');
+		var fm = document.getElementById('fecha-modal');
+		var mb = document.getElementById('modal-box');
+		butmodal.onclick = function(){
+			modal.style.display = "flex";
+			modal.style.background = "rgba(0,0,0,0.5)";
+			modal.style.opacity = "1";
+			modal.style.transition = "background 1s, opacity 2s";
+			mb.style.display = "flex";
+			mb.style.right = "0";
+			mb.style.opacity = "1";
+			mb.style.transition = "background 1s, opacity 2s";
+
+		}
+		window.onclick = function(event){
+			if(event.target == modal){
+				modal.style.display = "none";
+				modal.style.background = "rgba(0,0,0,0)";
+				modal.style.opacity = "0";
+				mb.style.opacity = "0";
+				mb.style.right = "-700px";
+				mb.style.display = "none";
+
+			}
+		}
+		fm.onclick  =function(){
+			modal.style.display = "none";
+			modal.style.background = "rgba(0,0,0,0)";
+			modqal.style.opacity = "0";
+			mb.style.opacity = "0";
+				mb.style.right = "-700px";
+				mb.style.display = "none";
+		}
+
+//fim modal box
+</script>	
+</body>
+</html>
