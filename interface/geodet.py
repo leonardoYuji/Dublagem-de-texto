@@ -13,7 +13,7 @@ sudo apt-get install python-matplotlib
 """ 
  
 ################## 
-DELAY = 0.02 
+DELAY = 0.05 
 USE_CAM = 1
 IS_FOUND = 0 
  
